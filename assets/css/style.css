@@ -190,108 +190,28 @@ article #photoImage {
 #portfolio_Container {
      width: 100%;
      height: 100%;
-     margin: 10px 20px;
      position: relative;
-
 }
-
 #portfolio_Container img {
-     width: 150px;
-     height: 150px;
-     margin: 10px;
-
+     width: 90%;
+     height: 285px;
+     margin: 10px 15px 10px 30px;
 }
-
 .photoDec {
      background-color: #1ee0d7ce;
-     width: 150px;
+     width: 90%;
      height: 40px;
      padding: 5px;
      text-align: center;
      color: black;
-     float: right;
-     margin: 0 10px;
+     margin: 0 30px;
+     position: relative;
+     top:-70px;
      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .photoDec:hover {
      color: brown
-}
-
-.photoName1 {
-     position: absolute;
-     top: 110px;
-     left: 0px;
-}
-
-.photoName2 {
-     position: absolute;
-     top: 110px;
-     left: 174px;
-}
-
-.photoName3 {
-     position: absolute;
-     top: 110px;
-     left: 348px;
-
-}
-
-.photoName4 {
-     position: absolute;
-     top: 110px;
-     left: 523px;
-}
-
-.photoName5 {
-     position: absolute;
-     top: 287px;
-     left: 0px;
-}
-
-.photoName6 {
-     position: absolute;
-     top: 287px;
-     left: 174px;
-}
-
-.photoName7 {
-     position: absolute;
-     top: 287px;
-     left: 348px;
-
-}
-
-.photoName8 {
-     position: absolute;
-     top: 287px;
-     left: 523px;
-
-}
-
-.photoName9 {
-     position: absolute;
-     top: 461px;
-     left: 0px;
-
-}
-
-.photoName10 {
-     position: absolute;
-     top: 461px;
-     left: 174px;
-}
-
-.photoName11 {
-     position: absolute;
-     top: 461px;
-     left: 348px;
-}
-
-.photoName12 {
-     position: absolute;
-     top: 461px;
-     left: 523px;
 }
 
 /* Specific styling for Portfolio page ends */
@@ -322,9 +242,6 @@ input.text {
      height: 40px;
      font-size: 18px;
      color: white;
-
-
 }
-
 }
 /* Specific styling for Contact page ends */
