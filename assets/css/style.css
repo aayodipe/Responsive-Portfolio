@@ -1,5 +1,6 @@
 /* Generic  styling begins (  The  css style from line 2 to line 150 apply to all the pages) */
-@media screen and (max-width:640px){
+@media screen and (max-width: 640px) and (min-width: 320px) {
+ 
 * {
      box-sizing: border-box
 }
@@ -196,9 +197,12 @@ article #photoImage {
 #portfolio_Container img {
      width: 90%;
      height: 285px;
-     margin: 10px 15px 10px 30px;
+     margin: 10px 5%;
 }
+
+
 .photoDec {
+    
      background-color: #1ee0d7ce;
      width: 90%;
      height: 40px;
@@ -208,6 +212,7 @@ article #photoImage {
      margin: 0 30px;
      position: relative;
      top:-70px;
+     left:-1px;
      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
