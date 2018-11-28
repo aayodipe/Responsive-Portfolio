@@ -18,8 +18,8 @@
           padding: 0;
           font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
           line-height: 25px;
-          /* background: url('../images/cork-wallet.png'); */
-          background-color: gray;
+          background: url('../images/cork-wallet.png'); 
+          
      }
      
      h1 {
@@ -337,8 +337,8 @@
           padding: 0;
           font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
           line-height: 25px;
-          /* background: url('../images/cork-wallet.png'); */
-          background-color: green;
+          background: url('../images/cork-wallet.png');
+          
      }
      
      h1 {
@@ -1160,16 +1160,14 @@
           width: 100%;
           height: 100%;
           margin: 10px 20px;
-          padding-right:4%;
           position: relative;
      
      }
      
      #portfolio_Container img {
-          width: 46%;
-          height: 250px;
-          margin: auto 25px 10px 1px;
-          float:right;
+          width: 44%;
+          height: 150px;
+          margin: 10px;
      
      }
      
@@ -1179,7 +1177,8 @@
           height: 40px;
           padding: 5px;
           text-align: center;
-          color: black;   
+          color: black;
+          float: right;
           /* margin: 0 10px; */
           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
      }
@@ -1189,78 +1188,81 @@
      }
      
      .photoName1 {
-          position: relative;
-          top: 200px;
-          left: -8px;
+          position: absolute;
+          top: 110px;
+          left: 10px;
      }
      
      .photoName2 {
           position: absolute;
-          top: 460px;
-          left:113px
+          top: 110px;
+          left:341px;
      }
      
      .photoName3 {
           position: absolute;
-          top: 200px;
-          left: 361px;
+          top: 290px;
+          left: 10px;
+     
      }
      
-     .photoName4 {
-          position: absolute;
-          top: 460px;
-          left: 326px;
-      }
-      .photoName5 {
-          position: absolute;
-          top: 720px;
-          left: -7px
-      }
-     .photoName6 {
-          position: absolute;
-          top: 720px;
-          left: 326px;
-     }
-          /*
-     .photoName7 {
+      .photoName4 {
           position: absolute;
           top: 287px;
-          left: 348px;
+          left:341px;
+     }
+     
+     .photoName5 {
+          position: absolute;
+          top: 465px;
+          left: 10px;
+     }
+     
+     .photoName6 {
+          position: absolute;
+          top: 461px;
+          left:  341px;
+     }
+     
+     .photoName7 {
+          position: absolute;
+          top: 640px;
+          left: 10px;
      
      }
      
      .photoName8 {
           position: absolute;
-          top: 287px;
-          left: 523px;
+          top: 640px;
+          left:  341px;
      
      }
      
      .photoName9 {
           position: absolute;
-          top: 461px;
-          left: 0px;
-     
+          top: 818px;
+          left: 10px;
      }
      
      .photoName10 {
           position: absolute;
-          top: 461px;
-          left: 174px;
+          top: 818px;
+          left:  341px;
      }
      
      .photoName11 {
           position: absolute;
-          top: 461px;
-          left: 348px;
+          top: 995px;
+          left: 10px
+         
      }
      
      .photoName12 {
           position: absolute;
-          top: 461px;
-          left: 523px;
-     }
-     
+          top: 995px;
+          left: 341px;
+         
+     } */
      /* Specific styling for Portfolio page ends */
      
      /* Specific styling for Contact page begins */
@@ -1510,7 +1512,7 @@
           margin: 0 30px;
           position: relative;
           top:-70px;
-          left:-1px;
+          left:-5px;
           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
      }
      
