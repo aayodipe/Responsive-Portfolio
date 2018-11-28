@@ -1269,18 +1269,26 @@
      form {
           width: 100%;
           margin: 0px 24px;
-          font-size: 18px
+          font-size: 18px;
+         
+          
+     }
+     .formtext{
+          margin:30px;
+          font-weight:bold;
      }
      
      input.text {
-          width: 94%;
+          width: 90%;
           margin-bottom: 10px;
+          margin-left:30px;
           height: 40px;
      }
      
      #textarea {
-          width: 94%;
+          width: 90%;
           margin-bottom: 10px;
+          margin-left:30px;
      } 
      
      #button {
@@ -1289,6 +1297,7 @@
           background-color: #4aaaa5;
           width: 100px;
           height: 40px;
+          margin-left:30px;
           font-size: 18px;
           color: white;
      
@@ -1509,10 +1518,10 @@
           padding: 5px;
           text-align: center;
           color: black;
-          margin: 0 30px;
+          margin: 0 30px; 
           position: relative;
           top:-70px;
-          left:-5px;
+          left:-1px;
           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
      }
      
