@@ -83,10 +83,7 @@ const animals = [
 			//get giphy url
 			let queryURL =
 				'https:api.giphy.com/v1/gifs/search?api_key=' +
-				apiKey +
-				'&q=' +
-				animalPick +
-				'&limit=10&offset=0&rating=G&lang=en';
+				apiKey +'&q=' + animalPick +'&limit=10&offset=0&rating=G&lang=en';
 
 			// Performing our AJAX GET request
 			$.ajax({
