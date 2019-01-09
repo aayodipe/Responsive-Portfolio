@@ -51,11 +51,10 @@ $('#input-button').on('click', function (event) {
 	event.preventDefault();
 	//empty the animal array
 	$('#animal-buttons').empty();
-	let animalAdded = $('#animal-input')
-		.val()
-		.trim();
+	let animalAdded = $('#animal-input').val().trim();
 	//check animal added is already exist or nothing is typed in the input box
 	for (var i = 0; i < animals.length; i++) {
+		let animalToLowerCase = animals[i].toLowerCase
 		if (animals.includes(animalAdded) || animalAdded.length === 0) {
 			$('#animal-input').val('');
 			$('#animal-buttons').empty();
@@ -82,7 +81,7 @@ $(document.body).on('click', '.animal', function () {
 
 	//get giphy url
 	let queryURL =
-		'https:api.giphy.com/v1/gifs/search?api_key=' +
+		'https://api.giphy.com/v1/gifs/search?api_key=' +
 		apiKey + '&q=' + animalPick + '&limit=10&offset=0&rating=G&lang=en';
 
 	// Performing our AJAX GET request
