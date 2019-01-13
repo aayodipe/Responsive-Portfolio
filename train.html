@@ -13,7 +13,10 @@
   </head>
 
   <body>
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+       <div class="container">
+               <!-- carousel Div -->
+          <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                       <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
                       <li data-target="#carouselIndicators" data-slide-to="1"></li>
@@ -34,24 +37,27 @@
                               <img src="assets/images/train4.jpg" class="d-block w-100" alt="...">
                       </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
-                  <div class="train-details "><p class="current-train h3 bg-primary text-white mb-0 text-center p-4">Current Train</p>
+
+                  <!-- Current Train Div -->
+                  <div class="train-details"><p class="current-train h3 bg-primary text-white mb-0 text-center p-4">Current Train</p>
                          <table class="table">
                                    <thead>
                                      <tr>
                                        <th scope="col">Train Name</th>
                                        <th scope="col">Destination</th>
-                                       <th scope="col">Frequency (Min)</th>
+                                       <th scope="col">Frequency (min)</th>
                                        <th scope="col">Next Arrival</th>
                                        <th scope="col">Minutes Away</th>
+                                       
                                      </tr>
                                    </thead>
                                    <tbody>
@@ -59,6 +65,30 @@
                                    </tbody>
                                  </table>
                   </div>
+                  <!-- form div -->
+                  <div class="add-train mt-5  border  border-primary"><p class="add-train-text h3 bg-primary text-white mb-0 text-center p-1">Add Train</p>
+                  <form class="train-form m-3">
+                         <div class="form-group  ">
+                           <label for="train-name">Train Name </label>
+                           <input type="text" class="form-control" id="train-name" >
+                         </div>
+                         <div class="form-group">
+                                   <label for="train-name">Desination </label>
+                                   <input type="text" class="form-control" id="desination" >
+                         </div>
+                         <div class="form-group">
+                                   <label for="train-name">First Train Time(hh:mm- Military Time) </label>
+                                   <input type="text" class="form-control" id="desination" >
+                         </div>
+                         <div class="form-group">
+                                   <label for="train-name">Frequency(min) </label>
+                                   <input type="text" class="form-control" id="desination" >
+                         </div>
+                         
+                         </div>
+                         
+                    </form>
+               </div>
   
 
     <!-- Optional JavaScript -->
