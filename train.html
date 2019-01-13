@@ -8,8 +8,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style2.css">
-
-    <title>TRAIN TIME</title>
+  <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="assets/javascript/trainapp.js"></script>
+  
+     <title>TRAIN TIME</title>
   </head>
 
   <body>
@@ -70,28 +77,30 @@
                   <form class="train-form m-3">
                          <div class="form-group  ">
                            <label for="train-name">Train Name </label>
-                           <input type="text" class="form-control" id="train-name" >
+                           <input type="text" class="form-control" id="train-name" required >
                          </div>
                          <div class="form-group">
-                                   <label for="train-name">Desination </label>
-                                   <input type="text" class="form-control" id="desination" >
+                                   <label for="desination">Destination </label>
+                                   <input type="text" class="form-control" id="destination" required >
                          </div>
                          <div class="form-group">
-                                   <label for="train-name">First Train Time(hh:mm- Military Time) </label>
-                                   <input type="text" class="form-control" id="desination" >
+                                   <label for="train-time">First Train Time(hh:mm- Military Time) </label>
+                                   <input type="text" class="form-control" id="train-time" required >
                          </div>
                          <div class="form-group">
-                                   <label for="train-name">Frequency(min) </label>
-                                   <input type="text" class="form-control" id="desination" >
+                                   <label for="frequency">Frequency(min) </label>
+                                   <input type="text" class="form-control" id="frequency"  required>
                          </div>
                          
-                         </div>
                          
+                         <button type="submit" class="btn btn-primary submit">Submit</button>
                     </form>
                </div>
+     </div>
   
 
     <!-- Optional JavaScript -->
+  
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
