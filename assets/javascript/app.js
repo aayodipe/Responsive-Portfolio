@@ -61,8 +61,6 @@ $('#input-button').on('click', function (event) {
 			renderAnimal();
 			return false;
 		} else {
-			//test
-			console.log('Animal Added: ' + animalAdded);
 			animals.push(animalAdded);
 			renderAnimal();
 			$('#animal-input').val('');
@@ -76,9 +74,7 @@ $(document.body).on('click', '.animal', function () {
 	const apiKey = 'vL5PfNP79JhSnylWQQIL9q21wNGcdgd5';
 	//stores name of animal clicked
 	let animalPick = $(this).attr('id');
-	//test
-	console.log('Animal Picked: ' + animalPick);
-
+	
 	//get giphy url
 	let queryURL =
 		'https://api.giphy.com/v1/gifs/search?api_key=' +
@@ -100,7 +96,7 @@ $(document.body).on('click', '.animal', function () {
 
 
 				// Only taking action if the photo has an appropriate rating
-				if (animal.rating !== 'r' && animal.rating !== 'pg-13') {
+				 
 					// Creating a div for the gif
 					var gifDiv = $('<div>')
 					gifDiv.css({
@@ -109,7 +105,7 @@ $(document.body).on('click', '.animal', function () {
 						margin: '3px',
 						float: 'left'
 					});
-
+				
 					// Storing the result item's rating
 					var rating = animal.rating;
 
@@ -121,7 +117,8 @@ $(document.body).on('click', '.animal', function () {
 
 					// Giving the image tag an src attribute of a proprty pulled off the
 					// result item
-					animalImage.attr('src', animal.images.fixed_height.url);
+					animalImage.attr('src', animal.images.fixed_height.url)
+					           .addClass(".gif")
 
 					// Appending the paragraph and personImage we created to the "gifDiv" div we created
 					gifDiv.append(p);
@@ -129,7 +126,18 @@ $(document.body).on('click', '.animal', function () {
 
 					// Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
 					$('#images').prepend(gifDiv);
-				}
+				
 			})
 		});
 });
+	 //function for animating gifs
+	 $(document).on('click', '.gif', function () {
+		var state = $(this).attr('id');
+		if (state == 'still') {
+		    $(this).attr('src', $(this).data('animate'));
+		    $(this).attr('id', 'animate');
+		} else {
+		    $(this).attr('src', $(this).data('still'));
+		    $(this).attr('id', 'still');
+		}
+	  });
