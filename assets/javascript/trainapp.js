@@ -22,14 +22,24 @@ let OregonTimer = startTime+3600
 
 console.log(startTime)
 
+let trainName = "";
+let destination ="";
+let trainTime = "";
+let frequency = "";
+let nameCell = "";
+let destinationCell="";
+let frequencyCell ="";
+let trainTimeCell = ""; 
+
+// Button for adding New Train
 $(".submit").on("click", function (event) {
   //Prevent default behaviour of submit event
      event.preventDefault()
-   
-     let trainName = $("#train-name").val().trim()
-     let destination = $("#destination").val().trim()
-     let trainTime = $("#train-time").val().trim()
-     let frequency = $("#frequency").val().trim()
+   // grab user Input
+     trainName = $("#train-name").val().trim()
+     destination = $("#destination").val().trim()
+     trainTime = $("#train-time").val().trim()
+     frequency = $("#frequency").val().trim()
  
 
      console.log(trainName, destination, trainTime, frequency)
@@ -43,30 +53,24 @@ $(".submit").on("click", function (event) {
         
      })
 
- 
 
-database.ref().on("child_added", function (snapshot) {
+database.ref().on("value", function (snapshot) {
      console.log(snapshot.val());
 
      let tr = $('<tr>')
-     let nameCell = $("<td>").text(snapshot.val().Train_Name)
+      nameCell = $("<td>").text(snapshot.val().Train_Name)
      nameCell.appendTo(tr)
      tr.appendTo("tbody")
-     let destinationCell = $("<td>").text(snapshot.val().Destination)
+      destinationCell = $("<td>").text(snapshot.val().Destination)
      destinationCell.appendTo(tr)
     
-     let frequencyCell = $("<td>").text(snapshot.val().Frequency)
+      frequencyCell = $("<td>").text(snapshot.val().Frequency)
      frequencyCell.appendTo(tr)
     
-     let trainTimeCell = $("<td>").text(snapshot.val().Train_Time)
-     trainTimeCell.appendTo(tr)
+      trainTimeCell = $("<td>").text(snapshot.val().Train_Time)
+     trainTimeCell.appendTo(tr);
+     dateAdded: firebase.database.ServerValue.TIMESTAMP
      
-     
-
-
-
-
-
 })
 })
 })
