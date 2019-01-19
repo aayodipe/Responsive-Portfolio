@@ -81,7 +81,7 @@ $(document).ready(function () {
       
                var nextTrain = moment().add(tMinutesTillTrain, "minutes");
               
-               var nextArrival = moment(nextTrain).format("HH:mm");
+               var nextArrival = moment(nextTrain).format("LT");
 
                //Populae to HTML
                let tr = $("<tr>").addClass("table-tr").append(
