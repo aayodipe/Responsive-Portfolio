@@ -46,57 +46,63 @@ $(document).ready(function () {
                     $("#frequency").val("")
                })
 
-               database.ref().on("child_added", function (snapshot) {
-      // Store everything into a variable.
-      let tName = snapshot.val().Train_Name
-      let tDestination = snapshot.val().Destination
-      let tFrequency = snapshot.val().Frequency
-   
-    
-    // First train time
-    let firstTime = snapshot.val().TrainFirstTime
-    // First Time (pushed back 1 year to make sure it comes before current time)
-    var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
-    console.log(firstTimeConverted);
+     database.ref().on("child_added", function (snapshot) {
+        //set the snapshot to sv
+               var sv= snapshot.val();
+           //test 
+               console.log(sv);
+               console.log(sv.Train_Name);
+               console.log(sv.Destination);
+               console.log(sv.firstTrain);
+               console.log(sv.Frequency)
+            
+            
+            //Assign Friquency to sv.frequency
+               tFrequency = sv.Frequency
+            
+               firstTrain = sv.TrainFirstTime
+            
+               console.log(tFrequency, firstTrain);
+            
+               var firstTimeConverted = moment(firstTrain, "HH:mm").subtract(1, "years");
+               console.log(firstTimeConverted);
+            
+               var currentTime = moment();
+               console.log("Current Time " + moment(currentTime).format("HH:mm"));
+            
+               var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+               console.log(diffTime);
+            
+               var tRemainder = diffTime % tFrequency;
+               console.log(tRemainder);
+            
+               var tMinutesTillTrain = tFrequency - tRemainder;
+               console.log("Minutes until next train " + tMinutesTillTrain);
+      
+               var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+              
+               var nextArrival = moment(nextTrain).format("HH:mm");
 
-    // Current Time
-    var currentTime = moment();
-   
-    console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
-
-    // Difference between the times
-    var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-    console.log( "DIFFERENCE IN TIME: " + diffTime);
-
-    // Time apart (remainder)
-    var tRemainder = diffTime % tFrequency;
-    console.log(tRemainder);
-
-    // Minute Until Train
-    var tMinutesTillTrain = tFrequency - tRemainder;
-    console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
-
-    // Next Train
-    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-    console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
- 
-                   
-
-
-                   let tr = $("<tr>").append(
-                    $("<td>").text(tName),
-                    $("<td>").text(tDestination),
-                    $("<td>").text(tFrequency),
+               //Populae to HTML
+               let tr = $("<tr>").addClass("table-tr").append(
+                    $("<td>").text(sv.Train_Name),
+                    $("<td>").text(sv.Destination),
+                    $("<td>").text(sv.Frequency),                    
+                    $("<td>").text(nextArrival),
                     $("<td>").text(tMinutesTillTrain),
-                    $("<td>").text(nextTrain),
                     $("<button>").text("x").addClass("delete-button")
                    )
                     tr.appendTo("tbody")
                      // Handle the errors
                }, function(errorObject) {
                     console.log("Errors handled: " + errorObject.code);
-     });
-     //     $(".delete-button").on("click",function(){
-     //          $(this).empty("tr")
-     //     })
+     })    
+            
+          
+         $(".delete-button").on("click",function(){
+         
+               $(this).remove();
+          
+          
+         })
 })
