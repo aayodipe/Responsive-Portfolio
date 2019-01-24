@@ -18,57 +18,52 @@ $(document).ready(function () {
      $(".submit").on("click", function (event) {
           //Prevent default behaviour of submit event
           event.preventDefault()
-          // grab user Input
+         
+           // Get form value
           let trainName = $("#train-name").val().trim()
           let destination = $("#destination").val().trim()
           let trainFirstTime = $("#train-time").val().trim()
           let frequency = $("#frequency").val().trim()
-          
-          
-         
-          console.log(trainName, destination, trainFirstTime, frequency)
-
+         //Validate Form
+          if(trainName ===""|| destination ===""|| trainFirstTime ===""|| frequency ===""){
+               updateTrain("Please provide train details", "train-not-added")
+          }else{
                     let trainData = {
                          Train_Name: trainName,
                          Destination: destination,
                          Frequency: frequency,
-                         TrainFirstTime:trainFirstTime
-                    
+                         TrainFirstTime:trainFirstTime    
                     }
+                    // Push data to firebase database
+                   // database.ref().push(trainData)
 
-                    // Uploads employee data to the database
-                    database.ref().push(trainData)
-
-                    //clear the input field
+                    //clear the input field                  
                     $("#train-name").val("")
                     $("#destination").val("")
                     $("#train-time").val("")
                     $("#frequency").val("")
+ 
+                    //Add more train successful
+                     updateTrain("New Train Added Successful","train-added")
+               }
+               //Set timeOut 
+               setTimeout(function() {
+                    document.querySelector("#train-update-div").remove()},3000)
+          
                })
 
      database.ref().on("child_added", function (snapshot) {
         //set the snapshot to sv
                var sv= snapshot.val();
-           //test 
-               console.log(sv);
-               console.log(sv.Train_Name);
-               console.log(sv.Destination);
-               console.log(sv.firstTrain);
-               console.log(sv.Frequency)
-            
-            
+         
             //Assign Friquency to sv.frequency
                tFrequency = sv.Frequency
             
                firstTrain = sv.TrainFirstTime
-            
-               console.log(tFrequency, firstTrain);
-            
+                        
                var firstTimeConverted = moment(firstTrain, "HH:mm").subtract(1, "years");
-               console.log(firstTimeConverted);
-            
                var currentTime = moment();
-               console.log("Current Time " + moment(currentTime).format("HH:mm"));
+              
             
                var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
                console.log(diffTime);
@@ -77,32 +72,38 @@ $(document).ready(function () {
                console.log(tRemainder);
             
                var tMinutesTillTrain = tFrequency - tRemainder;
-               console.log("Minutes until next train " + tMinutesTillTrain);
-      
                var nextTrain = moment().add(tMinutesTillTrain, "minutes");
               
                var nextArrival = moment(nextTrain).format("LT");
 
                //Populae to HTML
-               let tr = $("<tr>").addClass("table-tr").append(
+               let tr = $("<tr>").addClass("table-tr")
+                                 attr("data-value")
+                                 .append(
                     $("<td>").text(sv.Train_Name),
                     $("<td>").text(sv.Destination),
                     $("<td>").text(sv.Frequency),                    
                     $("<td>").text(nextArrival),
                     $("<td>").text(tMinutesTillTrain),
-                    $("<button>").text("x").addClass("delete-button")
+                    $("<button>").text("x").addClass("delete-button mt-1")
                    )
                     tr.appendTo("tbody")
                      // Handle the errors
                }, function(errorObject) {
                     console.log("Errors handled: " + errorObject.code);
      })    
-            
+     //Add more train
+     function updateTrain(msg, color){
+          let newTrainAdded = $("<div>")
+                               .attr("id", "train-update-div")
+                               .addClass(color)
+                               .text(msg)
+                               .appendTo(".train-update")
+          } 
           
          $(".delete-button").on("click",function(){
-         
-               $(this).remove();
-          
+                  
+          //delete table row
           
          })
 })
