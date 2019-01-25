@@ -24,6 +24,7 @@ $(document).ready(function () {
           let destination = $("#destination").val().trim()
           let trainFirstTime = $("#train-time").val().trim()
           let frequency = $("#frequency").val().trim()
+          
          //Validate Form
           if(trainName ===""|| destination ===""|| trainFirstTime ===""|| frequency ===""){
                updateTrain("Please provide train details", "train-not-added")
@@ -78,14 +79,13 @@ $(document).ready(function () {
 
                //Populae to HTML
                let tr = $("<tr>").addClass("table-tr")
-                                 attr("data-value")
                                  .append(
                     $("<td>").text(sv.Train_Name),
                     $("<td>").text(sv.Destination),
                     $("<td>").text(sv.Frequency),                    
                     $("<td>").text(nextArrival),
                     $("<td>").text(tMinutesTillTrain),
-                    $("<button>").text("x").addClass("delete-button mt-1")
+                    $("<button>").text("x").addClass("delete-button mt-2 mr-3")
                    )
                     tr.appendTo("tbody")
                      // Handle the errors
@@ -103,7 +103,8 @@ $(document).ready(function () {
           
          $(".delete-button").on("click",function(){
                   
-          //delete table row
+         let removeTrain = querySelector("tr:last-child")
+         console.log("removeTrain")
           
          })
 })
