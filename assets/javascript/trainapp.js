@@ -101,10 +101,10 @@ $(document).ready(function () {
                                .appendTo(".train-update")
           } 
           
-         $(".delete-button").on("click",function(){
-                  
-         let removeTrain = querySelector("tr:last-child")
-         console.log("removeTrain")
+         $(".delete-button").on("click",function(e){
+                  e.preventDefault()
+                  let removeTrain = e.target.parentNode.remove()
+       
           
          })
 })
