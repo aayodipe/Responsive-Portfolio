@@ -9,41 +9,174 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
   <title> A.Y PortFolio</title>
   <link rel="icon" href="assets/images/myImage.jpg" type="image/x-icon">
-  <link rel="shortcut icon" href="content/cv/images/favicon.ico">
-</head>
+  <style>
+    body{
+      font-family: 'Lobster Two', cursive;
+      margin:0;
+      padding:0;
+    }
+    
+    .wrapper{
+margin:0;
+padding:0;
+    }
+  .cv-image{
+    width:100%;
+  }
+  .name-and-title{  
+  margin: 0 auto;
+  padding-top:15%
+  }
+  .p-text{
+    padding-left:10vw;
+  }
+ .t-text{
+    padding-left:14vw;
+  }
+ 
+  
+  </style>
 
 <body>
-  <div class="container-fluid">
-    <header class="row bg-info">
-      <div class="col-sm-12 col-md-6"><img src="assets/images/aayodipe.jpg" alt="My photo image"></div>
-      <div class="col-sm-12 col-md-6">
-        <p class=" display-4 first-name ">Adeyemi</p>
-        <p class="last-name display-4">Ayodipe</p>
-        <p class="position">Web and Application Developer</p>
-        <p class="location">Lenexa, USA</p>
-        <button class=" btn btn-danger " id="view-more">View more</button>
+  <div class="container-fluid wrapper">
+    <!-- header -->
+    <header class="row bg-info" id="imageandname">
+      <div class="col-sm-12 col-md-6"><img src="assets/images/aayodipe.jpg" class="img-fluid cv-image " alt="My photo image"></div>
+      <div class="col-sm-12 col-md-6 text-white text-center  align-middle name-and-title">
+        <p class="display-4 first-name ">Adeyemi O. Ayodipe</p>
+        <p class="position h4">Web and Application Developer</p>
+        <p class="location h5 mb-5">Lenexa, USA</p>
+        <button class=" btn btn-danger mb-sm-5 view-more ">View more</button>
       </div>
 
     </header>
-    <section class="row" id="personal-info">
-      <div class="col-sm-12 col-md-6 bg-danger">
-        <div class="col-12 bg-info">
-          <p>Name <span class="info">Adeyemi</span></p>
-          <p>Surname <span class="info">Ayodipe</span></p>
-          <p>Marital Status <span class="info">Married</span></p>
-          <p>Birthday <span class="info">11-26-1900</span></p>
-          <p>Nationality <span class="info">Nigerian</span></p>
-          <p>Languages <span class="info">English</span></p>
+
+    <section class="personalinfo bg-white">
+      <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12">
+                <table class="cv-table">
+                    <h2> Personal</h2>
+                    <hr>
+                    <tbody class="h4">
+                        <tr>
+                            <td><b>Name</b></td>
+                            <td class="p-text">Adeyemi</td>
+                        </tr>
+                        <tr>
+                            <td><b>Surname</b></td>
+                            <td class="p-text">Ayodipe</td>
+                        </tr>
+                        <tr>
+                            <td><b>Marital status</b></td>
+                            <td class="p-text">Married</td>
+                        </tr>
+                        <tr>
+                            <td><b>Birthday</b></td>
+                            <td class="p-text">November 26 1983</td>
+                        </tr>
+                        <tr>
+                            <td><b>Nationality</b></td>
+                            <td class="p-text">Nigeria</td>
+                        </tr>
+                        <tr>
+                            <td><b>Spoken language</b></td>
+                            <td class="p-text">English</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-12 mt-5">
+                <table class="h4">
+                    <h2> Contact</h2>
+                    <hr>
+                    <tbody>
+                        <tr>
+                            <td><b>Address</td>
+                            <td class="t-text">Lenexa,Kansas,USA</td>
+                                
+                        </tr>
+                        <tr>
+                            <td><b>Mobile</b></td>
+                            <td class="t-text">913-548-6092</td>
+                        </tr>
+                        <tr>
+                            <td><b>E-mail</b></td>
+                            <td class="t-text"><a href="#">ayodipeadeyemi@gamil.com</a></td>
+                        </tr>
+                        <tr>
+                            <td><b>Website</b></td>
+                            <td class="t-text">https://www.aayodipe.com</td>
+                        </tr>
+                    </tbody>
+          </table>
+            </div>
+          </div>
+        <div class="col-sm-12 col-md-6 bg-white">
+          <p class="quote mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sed, quasi fugit quam a porro! Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="quote mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sed, quasi fugit quam a porro! Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="quote mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sed, quasi fugit quam a porro! Lorem ipsum dolor sit amet consectetur.</p>
         </div>
-        <div class="col-12 bg-primary">locatiton</div>
-      </div>
-      <div class="col-sm-12 col-md-6 bg-success">
-        favourite quote
       </div>
     </section>
+    <section class="project bg-dark"> 
+    </section>
+    <section class="skills bg-warning">skills</section>
+    <section class="carrier-experience bg-success">Experience</section>
+    <section class="Education bg-info">Education</section>
+    <section class="about-hobby bg-primary">hobby</section>
+    <footer class="bg-light">
+      <section class="fdb-block bg-dark" style="background-image: url(imgs/hero/blue.svg);">
+        <div class="container">
+          <div class="row text-center justify-content-center">
+            <div class="col-12 col-md-8 col-lg-7">
+              <h1>Contact Us</h1>
+              <h2>We love to hear from you!</h2>
+            </div>
+          </div>
+
+          <div class="row pt-4">
+            <div class="col-12">
+              <form>
+                <div class="row">
+                  <div class="col-12 col-md">
+                    <input type="text" class="form-control" placeholder="Name">
+                  </div>
+                  <div class="col-12 col-md mt-4 mt-md-0">
+                    <input type="text" class="form-control" placeholder="Email">
+                  </div>
+                  <div class="col-12 col-md mt-4 mt-md-0">
+                    <input type="text" class="form-control" placeholder="Phone (optional)">
+                  </div>
+                </div>
+
+                <div class="row mt-4">
+                  <div class="col">
+                    <input type="email" class="form-control" placeholder="Subject">
+                  </div>
+                </div>
+
+                <div class="row mt-4">
+                  <div class="col">
+                    <textarea class="form-control" name="message" rows="3" placeholder="How can we help?"></textarea>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col text-center">
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
   </div>
 
   <!-- Optional JavaScript -->
