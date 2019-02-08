@@ -20,6 +20,10 @@
       margin:0;
       padding:0;
     }
+    img{
+      max-width: 100%;
+      height: auto
+    }
     
     .wrapper{
 margin:0;
@@ -33,15 +37,25 @@ padding:0;
   padding-top:15%
   }
   .p-text{
-    padding-left:10vw;
+    text-align:right;
+ 
   }
  .t-text{
-    padding-left:14vw;
+    margin-left:10vw;
   }
+
+  .personal{
+    background-color: rgba(207, 209, 209);
+  }
+  .quote{
+  
+   background-color: #fcfcfc;
+  }
+
  
   
   </style>
-
+</head>
 <body>
   <div class="container-fluid wrapper">
     <!-- header -->
@@ -58,9 +72,9 @@ padding:0;
 
     <section class="personalinfo bg-white">
       <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <div class="col-sm-12">
-                <table class="cv-table">
+          <div class="col-sm-12 col-md-6 personal">
+            <div class="col-sm-12 table-responsive mt-5">
+                <table class="table table-hover table-borderless">
                     <h2> Personal</h2>
                     <hr>
                     <tbody class="h4">
@@ -89,44 +103,56 @@ padding:0;
                             <td class="p-text">English</td>
                         </tr>
                     </tbody>
-                </table>
+                </table>                               
             </div>
-            <div class="col-sm-12 mt-5">
-                <table class="h4">
-                    <h2> Contact</h2>
+            <div class="col-sm-12 table-responsive mt-5">
+                <table class="table table-hover table-borderless">
+                    <h2> CONTACT</h2>
                     <hr>
-                    <tbody>
+                    <tbody class="h4">
                         <tr>
-                            <td><b>Address</td>
-                            <td class="t-text">Lenexa,Kansas,USA</td>
-                                
+                            <td><b>Address</b></td>
+                            <td class="p-text">Lenexa, Kansas,USA</td>
                         </tr>
                         <tr>
-                            <td><b>Mobile</b></td>
-                            <td class="t-text">913-548-6092</td>
+                            <td><b>Phone</b></td>
+                            <td class="p-text">913-548-6092</td>
                         </tr>
                         <tr>
-                            <td><b>E-mail</b></td>
-                            <td class="t-text"><a href="#">ayodipeadeyemi@gamil.com</a></td>
+                            <td><b>Email</b></td>
+                            <td class="p-text">Ayodipeadeyemi@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><b>Website</b></td>
-                            <td class="t-text">https://www.aayodipe.com</td>
+                            <td><b>Birthday</b></td>
+                            <td class="p-text">November 26 1983</td>
+                        </tr>
+                        <tr>
+                            <td><b>Nationality</b></td>
+                            <td class="p-text">Nigeria</td>
+                        </tr>
+                        <tr>
+                            <td><b>Spoken language</b></td>
+                            <td class="p-text">English</td>
                         </tr>
                     </tbody>
-          </table>
+                </table>                               
             </div>
           </div>
-        <div class="col-sm-12 col-md-6 bg-white">
-          <p class="quote mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sed, quasi fugit quam a porro! Lorem ipsum dolor sit amet consectetur.</p>
-          <p class="quote mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sed, quasi fugit quam a porro! Lorem ipsum dolor sit amet consectetur.</p>
-          <p class="quote mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sed, quasi fugit quam a porro! Lorem ipsum dolor sit amet consectetur.</p>
+  
+    <div class="col-sm-12 col-md-6 quote">
+          <p class=" mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sed, quasi fugit quam a porro! Lorem ipsum dolor sit amet consectetur.</p>
+          <p class=" mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sed, quasi fugit quam a porro! Lorem ipsum dolor sit amet consectetur.</p>
+          <p class=" mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sed, quasi fugit quam a porro! Lorem ipsum dolor sit amet consectetur.</p>
         </div>
       </div>
     </section>
     <section class="project bg-dark"> 
+      <img src="assets/images/giftastic-icon.jpeg" class=".img-fluid max-with" alt="" srcset="">
+      
     </section>
-    <section class="skills bg-warning">skills</section>
+    <section class="skills bg-warning">
+      
+    </section>
     <section class="carrier-experience bg-success">Experience</section>
     <section class="Education bg-info">Education</section>
     <section class="about-hobby bg-primary">hobby</section>
