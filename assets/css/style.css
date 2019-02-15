@@ -106,7 +106,7 @@
      
      /*  This styles the top-left Name  */
      #myName {
-          background-color: #4aaaa5;
+          background-color: #0c0f0f9f;
           color: white;
           font-size: 30px;
           text-align: center;
@@ -119,7 +119,8 @@
      }
      
      nav {
-          background-color: white;
+          background-color: rgba(5, 5, 5, 0.507);
+          color:white
      }
      
      .mainSection {
