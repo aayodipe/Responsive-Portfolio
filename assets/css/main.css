@@ -42,7 +42,7 @@ body {
 }
 
 .main-section {
-     height: 650px;
+     height: 750px;
      padding-top: 150px;
      background: url('../images/animated-img.png');
      background-size: cover;
@@ -50,6 +50,7 @@ body {
      background-attachment: fixed;
 
 }
+
 
 .social-media {
      color: white
@@ -87,21 +88,41 @@ padding:20
 
 }
 
-.my-projects{
+.my-portfolio{
    
    
-     background: url('../images/rainbow_Tunnel.png');
+     background: url('../images/woods.jpg');
      background-size: cover;
      background-position: 0 -360px;
      background-attachment: fixed;
+     
+}
+.my-projects{
+     margin-bottom:100px;
 }
 .project-image{
      width:100%;
-     height:100%
-}
+     height:250px
+     }
 
 .project{
      width:100%;
      
+     
 }
 
+/* color */
+.btn-white {
+     background-color: white;
+     color:black
+}
+.val{
+     border-left: 6px solid rgb(249, 252, 249);
+     height: 150px;
+    
+    
+}
+.icon{
+     
+     margin-top:10px;
+}
