@@ -1,3 +1,4 @@
+
 * {
      box-sizing: border-box
 }
@@ -14,84 +15,93 @@ body {
      margin: 0;
      padding: 0;
      font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    
-}
-
-img{
-
-    max-width: 100%; 
-    /* height: 400px */
-}
-
-.container-fluid{
-     margin:0;
-     padding:0;
-background-color: rgb(121, 112, 36);
-
+     overflow-y: scroll;
+     overflow-x: hidden;
 
 }
+
+.container-fluid {
+     margin: 0;
+     padding: 0;
+     background-color: rgb(7, 7, 6);
+}
+
 .nav {
-     width:100%;
-     margin:0 auto;
+     width: 100%;
+     margin: 0 auto;
      background-color: rgba(0, 0, 0, 0.8)
-   
-} 
-.nav-link{
-     color:white
 }
+
+.nav-link {
+     color: white
+}
+
+.nav-link:hover {
+     color: rgba(253, 252, 252, 0.267);
+     text-decoration: none;
+}
+
 .main-section {
-     position: absolute;
-     top:0;
-     height: 800px;
-     padding-top:200px;
+     height: 650px;
+     padding-top: 150px;
      background: url('../images/animated-img.png');
      background-size: cover;
-     background-position: 0 -360px  ;
+     background-position: 0 -360px;
      background-attachment: fixed;
-    
-   }
-.social-media{
-color:white
-   }
 
-.social-media:hover{
-     color:rgba(253, 252, 252, 0.267);
+}
+
+.social-media {
+     color: white
+}
+
+.social-media:hover {
+     color: rgba(253, 252, 252, 0.267);
      text-decoration: none;
+}
+
+.linkedIn, .github{
+padding:20
+}
+.arrow {
+     color: white;
+     opacity: 0.5;
+}
+
+.arrow:hover {
+     color: rgba(248, 246, 246, 0.616);
+     text-decoration: none;
+}
+
+.semi-colon{
+ height:200px;
+ width:200px;
+ font-size:50px;
+ margin-right:20px
+}
+
+.hr{
+     width:100%;
      
-        }
+     border: 2px solid white;
 
-
-.image_div {
-     width: 100vw;
-     height: 500px;
-     background-color: darkcyan;
-     overflow: hidden;
 }
 
-.title_div {
-     width: 100%;
-     height: 500px;
-     background-color: rgb(62, 97, 53);
-    
+.my-projects{
+   
+   
+     background: url('../images/rainbow_Tunnel.png');
+     background-size: cover;
+     background-position: 0 -360px;
+     background-attachment: fixed;
+}
+.project-image{
+     width:100%;
+     height:100%
 }
 
-/* About me*/
-.about_me{
-     width: 100%;    
+.project{
+     width:100%;
+     
 }
 
-/* Projects */
- .project {
-     width: 100%;
-     height: 300px;
-    
-}
-
-
-
-/* Eductions and Experience */
-/* .education_and_experience {
-     width: 100vw;
-     height: 500px;
-     background-color: rgb(129, 131, 126);
-} */
