@@ -15,7 +15,7 @@ body {
      margin: 0;
      padding: 0;
      color: white;
-     font-family: 'Roboto', sans-serif;
+     font-family: 'Medula One', cursive;
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
      background: -webkit-linear-gradient(left, #de6161, #2657eb);
@@ -205,6 +205,7 @@ ul {
 
 }
 .personal-info{
+     font-family: 'Cinzel', serif;
    height:400PX;
    margin-top:200px;
 }
@@ -249,6 +250,9 @@ ul {
      background-position: 0 -360px;
      background-attachment: fixed;
 
+}
+.name{
+     font-family: 'Old Standard TT', serif;
 }
 
 /* .my-projects{
@@ -299,5 +303,42 @@ ul {
 }
 
 .Skills {
+     font-family: 'Cinzel', serif;
      background-color: rgba(7, 5, 5, 0.8);
 }
+.about-fluid{
+     background: url('../images/forest.jpg');
+     background-size: cover;
+     padding-top: 100px;
+     background-position: 0 -360px;
+     background-attachment: fixed; 
+}
+.about-container{
+     background-color: rgba(5, 1, 1, 0.85);
+}
+.about-header{
+font-size: 3em;
+color:rgb(155, 153, 158)
+}
+
+/* footer */
+
+footer{
+     background-color: rgba(7, 6, 2, 0.61);
+}
+.footer-group{
+     padding:10px; 
+    
+}
+.footer-item a{
+margin-left: 20px;
+color:white;
+font-size: 20px;
+text-decoration: none
+
+}
+.footer-item a:hover{
+color:rgb(124, 121, 121);
+text-decoration: none
+}
+

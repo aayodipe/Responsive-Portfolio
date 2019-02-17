@@ -12,11 +12,11 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	 crossorigin="anonymous" />
 
-	
+
 
 
 	<!-- google font -->
-	<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Medula+One" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,30 +25,33 @@
 </head>
 
 <body>
-	<div class="wrapper">
-			<div class="primary-nav">
-					<button href="#" class="hamburger open-panel nav-toggle"> <span class="screen-reader-text"> Menu</span>
-					</button>
-					<nav role="navigation" class="menu"> <a href="#" class="logotype">A.Y<span>Dev</span></a>
-					  <div class="overflow-container">
-					    <ul class="menu-li">
-						 <li download><a href="assets/images/aayodipe.jpg" download>
-							<span class=" h2">Resume</span>
-						   </a><span class="icon"><i class="fa fa-file fa-2x"></i></span></li>
-						 <li class="menu-hasdropdown"> <a href="#"><span class="">
-							  <h2> Github </h3>
-							</span></a><span class="icon"><i class="fab fa-github fa-2x"></i></span>
-						 </li>
-						 <li><a href="#">
-							<h2>Linked-In</h2>
-						   </a><span class="icon"><i class="fab fa-linkedin-in fa-2x"></i></span></li>
-						 <li><a href="#">
-							<h2>Contact</h2>
-						   </a><span class="icon"><i class="fa fa-at fa-2x"></i></span></li>
-					    </ul>
-					  </div>
-					</nav>
-				   </div>
+	<div class="wrapper ">
+		<div class="primary-nav d-none d-lg-block">
+			<button href="#" class="hamburger open-panel nav-toggle"> <span class="screen-reader-text"> Menu</span>
+			</button>
+			<nav role="navigation" class="menu"> <a href="#" class="logotype">A.Y<span>Dev</span></a>
+				<div class="overflow-container">
+					<ul class="menu-li">
+						<!-- <a href="/images/myw3schoolsimage.jpg" download>
+								<img src="/images/myw3schoolsimage.jpg" alt="W3Schools">
+							   </a> -->
+						<li><a href="assets/images/aayodipe.jpg" download>
+								<span class=" h2">Resume</span>
+							</a><span class="icon"><i class="fa fa-file fa-2x"></i></span></li>
+						<li class="menu-hasdropdown"> <a href="https://github.com/aayodipe/" target="_blank"><span class="">
+									<h2> Github </h3>
+								</span></a><span class="icon"><i class="fab fa-github fa-2x"></i></span>
+						</li>
+						<li><a href="https://www.linkedin.com/in/aayodipe/" target="_blank">
+								<h2>Linked-In</h2>
+							</a><span class="icon"><i class="fab fa-linkedin-in fa-2x"></i></span></li>
+						<li><a href="#">
+								<h2>Contact</h2>
+							</a><span class="icon"><i class="fa fa-at fa-2x"></i></span></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
 		<div class="new-wrapper">
 			<div id="main">
 				<div id="main-contents">
@@ -57,12 +60,11 @@
 						<!-- Name and Introduction Section -->
 						<section class="row main-section">
 							<div class="row personal-info">
-								<div class="col-12 text-center  h5">Hi there! My name is</div>
-								<div class="col-12 text-center display-3">Adeyemi Ayodipe.</div>
+								<div class="col-12 text-center  h5  greeting"></div>
+								<div class="col-12 text-center display-3 name "></div>
 
-								<div class="col-12 text-center h4">A web & Application Full Stack Developer, and Critical Thinking Problem
-									Solver.</div>
-								<div class="col-12 text-center h6">A Coding BootCamp Graduate.</div>
+								<div class="col-12 text-center h4 disc"></div>
+								<div class="col-12 text-center h6 grad"></div>
 
 							</div>
 					</div>
@@ -212,24 +214,60 @@
 		</div>
 	</section>
 
-	<section class="about_me">
-		<div class="row">
-			<div class="col typeit text-danger text-center">I am here</div>
+	<section class="container-fluid about-fluid">
+		<div class="container about-container">
+			<div class="row">
+				<div class="col-sm-12 col-md-5 h1"><span class="semi-colon">::</span>
+					About Me</div>
+			</div>
+			<div class="row">
+				<div class="col-12"><span class="about-header"> #Technology</span>
+					<p class="about-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi soluta, obcaecati amet
+						dolorum in necessitatibus officia voluptas, asperiores nihil delectus nostrum laudantium, quos aspernatur unde
+						quod alias consequatur! Nisi aperiam numquam alias error et, quibusdam earum totam omnis, maxime quos corporis
+						inventore illo quam id!</p>
+				</div>
+				<div class="col-12"><span class="about-header"> #ThinkDifferent</span>
+					<p class="about_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam eaque voluptatem quis
+						rem? Expedita mollitia ab temporibus cumque eos deleniti adipisci neque porro beatae, quam quaerat debitis nulla
+						officia consectetur doloremque optio in a ad dolor autem quos. Error amet repellat tempore nemo reprehenderit
+						optio?</p>
+				</div>
+				<div class="col-12"><span class="about-header"> #UserFocused</span>
+					<p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, repellat assumenda voluptatum
+						cum facere ullam fugit eaque recusandae nostrum tempore quam dolorem maxime autem voluptates at sed architecto!
+						Ipsam sed dolor ipsa, deleniti laudantium assumenda voluptatibus quam temporibus cupiditate? Provident doloremque
+						ducimus obcaecati aut rem.</p>
+				</div>
+				<div class="col-12"><span class="about-header"> #GlobalAwareness</span>
+					<p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas a accusantium, sapiente culpa
+						voluptas quibusdam earum similique enim asperiores, eveniet, maxime iure tenetur soluta nulla velit? Nam magnam
+						in repudiandae facilis dolorem aliquid maiores sit, possimus optio laborum, perferendis at dolor voluptates
+						omnis! Tempora, quibusdam.</p>
+				</div>
+			</div>
+
 		</div>
-		<div class="row">
-			<div class="text-dark">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum at dicta laudantium molestiae commodi accusantium
-				itaque corporis voluptatum unde. Molestiae doloribus asperiores quas corporis sed, ab voluptatem excepturi
-				pariatur magni autem. Ullam saepe vel ab necessitatibus aperiam, ad unde aut!
+		</div>
+	</section>
+	<footer >
+		<div class="row bg-dark footer">
+			<div class="col-sm-12 col-lg-9 offset-lg-3">
+
+				<div class="footer-group ">
+					<span class="footer-item"><a href="https://github.com/aayodipe/" target="_blank"><i class="fab fa-github"> </i> Github</a></span>			
+
+					<span class="footer-item"><a href="https://github.com/aayodipe/" target="_blank"><i class="fab fa-linkedin-in"> </i> Linked-In</a></span>
+					
+					<span class="footer-item"><a href="assets/images/aayodipe.jpg" download>
+									Resume</a></span>
+					<span class="h5 ml-4 col-xs-12 d-xs-block">&copy;2019 Adeyemi Ayodipe </span>
+				</div>
+
+
 			</div>
 		</div>
-		<div class="row"></div>
-		<div class="row"></div>
-
-	</section>
-
-
-
+	</footer>
 	</div>
 
 
