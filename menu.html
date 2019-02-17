@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Multi-level Sidebar Push Navigation Demo</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+            box-sizing: border-box;
+               font-family: 'Roboto', sans-serif;
+               -webkit-font-smoothing: antialiased;
+               -moz-osx-font-smoothing: grayscale;
+               background: #de6161;
+               background: -webkit-linear-gradient(left, #de6161, #2657eb);
+               background: -o-linear-gradient(right, #de6161, #2657eb);
+               background: -moz-linear-gradient(right, #de6161, #2657eb);
+               background: linear-gradient(to right, #de6161, #2657eb);
+               width: 100%;
+               height: 100vh;
+}
+
+/* Layout */
+
+/* Menu Styles */
+
+
+.primary-nav {
+  position: fixed;
+  z-index: 999;
+}
+
+.menu { position: relative; }
+
+.open-panel {
+  border: none;
+  background-color: #cf2222;
+  padding: 0;
+}
+
+.hamburger {
+  background: rgb(148, 148, 148);
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 13px 0;
+  width: 50px;
+  height: 73px;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.hamburger:before {
+  content: "\2630"; /* hamburger icon */
+  display: block;
+  color: #000;
+  line-height: 32px;
+  font-size: 16px;
+}
+
+.openNav .hamburger:before {
+  content: "\2715"; /* close icon */
+  display: block;
+  color: #000;
+  line-height: 32px;
+  font-size: 16px;
+}
+
+.hamburger:hover:before { color: rgb(245, 225, 225); }
+
+.primary-nav .menu li { position: relative; }
+
+.menu .icon {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  pointer-events: none;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+}
+
+.menu, .menu a, .menu a:visited {
+  color: #aaa;
+  text-decoration: none!important;
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  white-space: nowrap;
+  padding: 1em;
+  font-size: 14px;
+}
+
+.menu a:hover { color: #fff; }
+
+.menu { margin-bottom: 3em; }
+
+
+.menu {
+  position: absolute;
+  display: block;
+  left: -200px;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  transition: all 1s;
+  background-image: linear-gradient(to left, rgba(29, 53, 29, 0), rgba(196, 68, 68, 0.5));
+  z-index: 999;
+}
+
+.overflow-container {
+  position: relative;
+  height: calc(100vh - 73px)!important;
+  overflow-y: auto;
+  border-top: 73px solid #fff;
+  z-index: -1;
+  display: block;
+}
+
+.menu a.logotype {
+  position: absolute!important;
+  top: 11px;
+  left: 55px;
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #000;
+  font-size: 31px;
+  padding: 10px;
+}
+
+.menu a.logotype span { font-weight: 400; }
+
+.menu a.logotype:hover { color: #777; }
+
+.sub-menu-dropdown { background-color: #333; }
+
+.menu:hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.openNav .menu:hover {
+  position: absolute;
+  left: -200px;
+ 
+}
+
+.openNav .menu {
+ 
+  transform: translate3d(200px, 0, 0);
+  transition: all 1s;
+}
+	
+	label.hamburger {
+		display: none;
+	}
+
+/* look and feel only, not needed for core menu*/
+
+@-webkit-keyframes 
+grow {  0% {
+ display: none;
+ opacity: 0;
+}
+ 50% {
+ display: block;
+ opacity: 0.5;
+}
+ 100% {
+ opacity: 1;
+}
+}
+ @keyframes 
+grow {  0% {
+ display: none;
+ opacity: 0;
+}
+ 50% {
+ display: block;
+ opacity: 0.5;
+}
+ 100% {
+ opacity: 1
+}
+}
+
+/* Text meant only for screen readers. */
+
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+  <div class="primary-nav">
+    <button href="#" class="hamburger open-panel nav-toggle"> <span class="screen-reader-text"> Menu</span>
+    </button>
+    <nav role="navigation" class="menu"> <a href="#" class="logotype">A.Y<span>Site</span></a>
+      <div class="overflow-container">
+        <ul class="">
+          <li download><a href="assets/images/aayodipe.jpg" download>
+              <h5>Resume</h5>
+            </a><span class="icon"><i class="fa fa-file fa-2x"></i></span></li>
+          <li class="menu-hasdropdown"> <a href="#"><span class="">
+                <h5> Github </h5>
+              </span></a><span class="icon"><i class="fa fa-github fa-2x"></i></span>
+          </li>
+          <li><a href="#">
+              <h5>Linked-In</h5>
+            </a><span class="icon"><i class="fab fa-linkedin-in"></i></span></li>
+          <li><a href="#">
+              <h5>Contact</h5>
+            </a><span class="icon"><i class="fa fa-at fa-2x"></i></span></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="new-wrapper">
+    <div id="main">
+      <div id="main-contents"></div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script>
+    $('.nav-toggle').click(function (e) {
+
+      e.preventDefault();
+      $("html").toggleClass("openNav");
+      $(".nav-toggle").toggleClass("active");
+
+    });
+  </script>
+  // <script type="text/javascript">
+    // (function () {
+    //      var ga = document.createElement('script');
+    //      ga.type = 'text/javascript';
+    //      ga.async = true;
+    //      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+    //           '.google-analytics.com/ga.js';
+    //      var s = document.getElementsByTagName('script')[0];
+    //      s.parentNode.insertBefore(ga, s);
+    // })();
+    //
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

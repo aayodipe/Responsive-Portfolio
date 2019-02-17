@@ -1,4 +1,3 @@
-
 * {
      box-sizing: border-box
 }
@@ -9,11 +8,20 @@
      clear: both;
 }
 
+
 body {
-     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-     color: white;
+     width: 100%;
+     height: 100%;
      margin: 0;
      padding: 0;
+     color: white;
+     font-family: 'Roboto', sans-serif;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     background: -webkit-linear-gradient(left, #de6161, #2657eb);
+     background: -o-linear-gradient(right, #de6161, #2657eb);
+     background: -moz-linear-gradient(right, #de6161, #2657eb);
+     background: linear-gradient(to right, #de6161, #2657eb);
      font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
      overflow-y: scroll;
      overflow-x: hidden;
@@ -26,6 +34,152 @@ body {
      background-color: rgb(7, 7, 6);
 }
 
+/*  Start side bar */
+ul {
+     list-style-type: none;
+     }
+.primary-nav {
+     position: fixed;
+     z-index: 999;
+   }
+
+   
+   .menu { position: relative; }
+   
+   .open-panel {
+     border: none;
+     background-color: #cf2222;
+     padding: 0;
+   }
+   
+   .hamburger {
+     background: rgb(148, 148, 148);
+     position: relative;
+     display: block;
+     text-align: center;
+     padding: 13px 0;
+     width: 50px;
+     height: 73px;
+     left: 0;
+     top: 0;
+     z-index: 1000;
+     cursor: pointer;
+   }
+   
+   .hamburger:before {
+     content: "\2630"; /* hamburger icon */
+     display: block;
+     color: #000;
+     line-height: 32px;
+     font-size: 16px;
+   }
+   .list-group-item li{
+   background-color: linear-gradient(to right, #de6161, #2657eb);
+   }
+   
+   .openNav .hamburger:before {
+     content: "\2715"; /* close icon */
+     display: block;
+     color: #000;
+     line-height: 32px;
+     font-size: 16px;
+   }
+   
+   .hamburger:hover:before { color: rgb(245, 225, 225); }
+   
+   .primary-nav .menu li { position: relative; }
+   
+   .menu .icon {
+     position: absolute;
+     top: 12px;
+     right: 10px;
+     pointer-events: none;
+     width: 24px;
+     height: 24px;
+     color: #fff;
+   }
+   
+   .menu, .menu a, .menu a:visited {
+     color: #aaa;
+     text-decoration: none!important;
+     position: relative;
+   }
+
+   
+   .menu a {
+     display: block;
+     white-space: nowrap;
+     padding: 1em;
+     font-size: 14px;
+   }
+
+   
+   .menu a:hover { color: #fff; }
+   
+   .menu { margin-bottom: 3em; }
+   
+   
+   .menu {
+     position: absolute;
+     display: block;
+     left: -200px;
+     top: 0;
+     width: 250px;
+     height: 100vh;
+     transition: all 1s;
+     background-image: linear-gradient(to left, rgba(4, 5, 15, 0), rgba(17, 1, 1, 0.384));
+     z-index: 999;
+   }
+   
+   .overflow-container {
+     position: relative;
+     height: calc(100vh - 73px)!important;
+     overflow-y: auto;
+     border-top: 73px solid rgba(8, 0, 0, 0.411);
+     z-index: -1;
+     display: block;
+   }
+   
+   .menu a.logotype {
+     position: absolute!important;
+     top: 11px;
+     left: 55px;
+     display: block;
+     font-family: 'Work Sans', sans-serif;
+     text-transform: uppercase;
+     font-weight: 800;
+     color: rgb(252, 248, 248);
+     font-size: 31px;
+     padding: 10px;
+   }
+   
+   .menu a.logotype span { font-weight: 400; }
+   
+   .menu a.logotype:hover { color: #777; }
+   
+   .sub-menu-dropdown { background-color: #333; }
+   
+   .menu:hover {
+     position: absolute;
+     left: 0;
+     top: 0;
+   }
+   
+   .openNav .menu:hover {
+     position: absolute;
+     left: -200px;
+    
+   }
+   
+   .openNav .menu {
+    
+     transform: translate3d(200px, 0, 0);
+     transition: all 1s;
+   }
+        
+        label.hamburger {
+             display: none;
+        }
 .nav {
      width: 100%;
      margin: 0 auto;
@@ -43,14 +197,17 @@ body {
 
 .main-section {
      height: 750px;
-     padding-top: 150px;
-     background: url('../images/animated-img.png');
+     padding-top: 10px;
+     background: url('../images/wood.jpg');
      background-size: cover;
      background-position: 0 -360px;
      background-attachment: fixed;
 
 }
-
+.personal-info{
+   height:400PX;
+   margin-top:200px;
+}
 
 .social-media {
      color: white
@@ -71,70 +228,76 @@ body {
      text-decoration: none;
 }
 
-.semi-colon{
- height:200px;
- width:200px;
- font-size:50px;
- margin-right:20px
+.semi-colon {
+     height: 200px;
+     width: 200px;
+     font-size: 50px;
+     margin-right: 20px
 }
 
-.hr{
-     width:100%;     
+.hr {
+     width: 100%;
      border: 2px solid white;
 
 }
 
-.my-portfolio{
-   
-   
+.my-portfolio {
+
+
      background: url('../images/woods.jpg');
      background-size: cover;
      background-position: 0 -360px;
      background-attachment: fixed;
-     
+
 }
+
 /* .my-projects{
      margin-bottom:100px;
 } */
-.project-image{
-     width:100%;
-     height:250px
-     }
+.project-image {
+     width: 100%;
+     height: 250px
+}
 
-.project{
+.project {
      background-color: rgba(0, 0, 0, 0.247);
-     width:100%;
-     
-     
+     width: 100%;
+
+
 }
 
 /* color */
 .btn-white {
-     background-color: white;
-     color:black
+     background-color: rgb(189, 187, 187);
+     color: black
 }
-.val{
+
+.val {
      border-left: 6px solid rgb(249, 252, 249);
      height: 150px;
-    
-    
+
+
 }
-.icon{
-     
-     padding-top:10px;
-}.my-projects{
+
+.icon {
+
+     padding-top: 10px;
+}
+
+.my-projects {
      margin-bottom: 100px;
 }
 
-.skills_container{
+.skills_container {
      background: url('../images/mountain.jpg');
      background-size: cover;
-     padding-top:100px;
+     padding-top: 100px;
      background-position: 0 -360px;
      background-attachment: fixed;
-     
-     
+
+
 }
-.Skills{
+
+.Skills {
      background-color: rgba(7, 5, 5, 0.8);
 }

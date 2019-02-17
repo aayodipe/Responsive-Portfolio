@@ -1,0 +1,151 @@
+// Define the mobile breakpoint here
+$xs: 767px;
+
+@mixin breakpoint($query) {
+  @media screen and (max-width: #{$query}) {
+    @content;
+  }
+}
+
+// Define the colors and font here
+$base-color: #4b4b4b;
+$overlay-color: rgba(230, 126, 54, 1);
+$text-color: #fff;
+$font: "Montserrat";
+
+// Define the box shadow here
+$box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+.jgs {
+  &__container {
+    position: relative;
+    transition: opacity 400ms ease;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  &__motivational {
+    @include breakpoint($xs) {
+      font-size: 1.5rem;
+    }
+
+    position: absolute;
+    top: 3%;
+    right: 10%;
+    transition: 800ms ease opacity;
+    color: $text-color;
+    font-family: $font;
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    z-index: 3;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__percentage-container {
+    @include breakpoint($xs) {
+      width: 50px;
+      height: 50px;
+      margin-left: 50px;
+    }
+
+    display: flex;
+    position: absolute;
+    top: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    transform: translateY(-50%);
+    transition: opacity 200ms ease;
+    border-radius: 50%;
+    background: $overlay-color;
+    box-shadow: $box-shadow;
+    opacity: 0;
+    z-index: 2;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__percentage-value {
+    color: $text-color;
+    font-family: $font;
+    font-size: 2rem;
+  }
+
+  &__image-container {
+    position: relative;
+  }
+
+  &__overlay-container {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom;
+    overflow: hidden;
+  }
+
+  &__overlay-image {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    transform-origin: bottom;
+  }
+
+  &__image-base {
+    width: 100%;
+  }
+
+  &__steps-container {
+    @include breakpoint($xs) {
+      display: none;
+    }
+
+    position: relative;
+    background: $base-color;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+  }
+
+  &__step {
+    position: relative;
+    width: 25%;
+    padding: 15px 0;
+    float: left;
+    transform-origin: top;
+    border-right: 2px solid $text-color;
+    color: $text-color;
+    font-family: $font;
+    text-align: center;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  &__sum-goal {
+    display: block;
+    font-size: 2rem;
+  }
+
+  &__goal {
+    display: block;
+    font-size: 1.4rem;
+  }
+
+  &__steps-highlighted {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    transform-origin: top;
+    background: $overlay-color;
+  }
+}

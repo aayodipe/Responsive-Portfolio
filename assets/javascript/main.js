@@ -1,10 +1,7 @@
-const progressBar = require('progressbar.js')
-window.onload = function onLoad() {
-let line = new ProgressBar.Line('#container', {
-         color: '#FCB03C',
-         duration: 3000,
-         easing: 'easeInOut'
-     });
- 
-     line.animate(1);
- };
+$('.nav-toggle').click(function (e) {
+
+     e.preventDefault();
+     $("html").toggleClass("openNav");
+     $(".nav-toggle").toggleClass("active");
+
+});
