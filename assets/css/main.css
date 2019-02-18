@@ -28,6 +28,10 @@ body {
 
 }
 
+a:hover{
+     text-decoration: none;
+}
+
 .container-fluid {
      margin: 0;
      padding: 0;
@@ -202,6 +206,7 @@ ul {
      background-size: cover;
      background-position: 0 -360px;
      background-attachment: fixed;
+     
 
 }
 .personal-info{
@@ -248,26 +253,29 @@ ul {
      background: url('../images/woods.jpg');
      background-size: cover;
      background-position: 0 -360px;
-     background-attachment: fixed;
+     background-attachment: fixed; 
+     padding-top:100px;
 
+     
 }
+
 .name{
      font-family: 'Old Standard TT', serif;
 }
 
-/* .my-projects{
+.my-projects{
      margin-bottom:100px;
-} */
+     
+}
 .project-image {
      width: 100%;
-     height: 250px
+     height: 96%
 }
 
 .project {
      background-color: rgba(0, 0, 0, 0.247);
      width: 100%;
-
-
+    
 }
 
 /* color */
@@ -275,6 +283,16 @@ ul {
      background-color: rgb(189, 187, 187);
      color: black
 }
+.btn-white a{
+list-style: none;
+color:black
+
+}
+.btn-white a:hover{
+     color:rgb(124, 121, 121);
+     text-decoration: none
+     }
+     
 
 .val {
      border-left: 6px solid rgb(249, 252, 249);
@@ -319,6 +337,29 @@ ul {
 .about-header{
 font-size: 3em;
 color:rgb(155, 153, 158)
+}
+/* contact me sections */
+.contact-row{
+background-color: rgba(12, 11, 11, 0.822)
+
+}
+.contact-row img{
+     border-radius:50%;
+     width: 300px;
+     height:300px;
+}
+.contact-detail{
+margin-top:3%
+
+}
+.a.name, .a.title, .a.email{
+font-size: 120px;
+margin-top:30px;
+
+}
+
+.a.github a:hover{
+     text-decoration: none;
 }
 
 /* footer */
