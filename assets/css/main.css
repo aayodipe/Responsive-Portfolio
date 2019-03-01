@@ -382,15 +382,15 @@ label.hamburger {
 }
 
 .contact-detail {
-     margin-top: 3%
+     margin-top: 3%;
+     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .a.name,
 .a.title,
 .a.email {
      font-size: 120px;
-     margin-top: 30px;
-
+     margin-top: 30px;   
 }
 
 .a.github a:hover {
@@ -401,6 +401,7 @@ label.hamburger {
 
 footer {
      background-color: rgba(7, 6, 2, 0.61);
+     font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .footer-group {
