@@ -1,3 +1,4 @@
+/* General Styling */
 * {
      box-sizing: border-box
 }
@@ -15,52 +16,51 @@ body {
      margin: 0;
      padding: 0;
      color: white;
-     font-family: 'Medula One', cursive;
-     -webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
-     background: -webkit-linear-gradient(left, #de6161, #2657eb);
-     background: -o-linear-gradient(right, #de6161, #2657eb);
-     background: -moz-linear-gradient(right, #de6161, #2657eb);
-     background: linear-gradient(to right, #de6161, #2657eb);
-     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
      overflow-y: scroll;
      overflow-x: hidden;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
 
 }
 
-a:hover{
+p {
+     font-family: 'Dosis', sans-serif;
+     font-size: 1.5em;
+}
+
+a:hover {
      text-decoration: none;
 }
 
-.container-fluid {
-     margin: 0;
-     padding: 0;
-     background-color: rgb(7, 7, 6);
-}
 
-/*  Start side bar */
+/* Nav Styling */
+
 ul {
      list-style-type: none;
-     }
+}
+
 .primary-nav {
      position: fixed;
      z-index: 999;
-   }
+}
 
-   
-   .menu { position: relative; }
-   
-   .open-panel {
+
+.menu {
+     position: relative;
+}
+
+.open-panel {
      border: none;
      background-color: #cf2222;
      padding: 0;
-   }
-   
-   .hamburger {
+}
+
+.hamburger {
      background: rgb(148, 148, 148);
      position: relative;
      display: block;
      text-align: center;
+     font-family: Georgia, 'Times New Roman', Times, serif;
      padding: 13px 0;
      width: 50px;
      height: 73px;
@@ -68,32 +68,39 @@ ul {
      top: 0;
      z-index: 1000;
      cursor: pointer;
-   }
-   
-   .hamburger:before {
-     content: "\2630"; /* hamburger icon */
+}
+
+.hamburger:before {
+     content: "\2630";
+     /* hamburger icon */
      display: block;
      color: #000;
      line-height: 32px;
      font-size: 16px;
-   }
-   .list-group-item li{
-   background-color: linear-gradient(to right, #de6161, #2657eb);
-   }
-   
-   .openNav .hamburger:before {
-     content: "\2715"; /* close icon */
+}
+
+.list-group-item li {
+     background-color: linear-gradient(to right, #de6161, #2657eb);
+}
+
+.openNav .hamburger:before {
+     content: "\2715";
+     /* close icon */
      display: block;
      color: #000;
      line-height: 32px;
      font-size: 16px;
-   }
-   
-   .hamburger:hover:before { color: rgb(245, 225, 225); }
-   
-   .primary-nav .menu li { position: relative; }
-   
-   .menu .icon {
+}
+
+.hamburger:hover:before {
+     color: rgb(245, 225, 225);
+}
+
+.primary-nav .menu li {
+     position: relative;
+}
+
+.menu .icon {
      position: absolute;
      top: 12px;
      right: 10px;
@@ -101,29 +108,35 @@ ul {
      width: 24px;
      height: 24px;
      color: #fff;
-   }
-   
-   .menu, .menu a, .menu a:visited {
-     color: #aaa;
-     text-decoration: none!important;
-     position: relative;
-   }
+}
 
-   
-   .menu a {
+.menu,
+.menu a,
+.menu a:visited {
+     color: #aaa;
+     text-decoration: none !important;
+     position: relative;
+}
+
+
+.menu a {
      display: block;
      white-space: nowrap;
      padding: 1em;
      font-size: 14px;
-   }
+}
 
-   
-   .menu a:hover { color: #fff; }
-   
-   .menu { margin-bottom: 3em; }
-   
-   
-   .menu {
+
+.menu a:hover {
+     color: #fff;
+}
+
+.menu {
+     margin-bottom: 3em;
+}
+
+
+.menu {
      position: absolute;
      display: block;
      left: -200px;
@@ -133,19 +146,19 @@ ul {
      transition: all 1s;
      background-image: linear-gradient(to left, rgba(4, 5, 15, 0), rgba(17, 1, 1, 0.384));
      z-index: 999;
-   }
-   
-   .overflow-container {
+}
+
+.overflow-container {
      position: relative;
-     height: calc(100vh - 73px)!important;
+     height: calc(100vh - 73px) !important;
      overflow-y: auto;
      border-top: 73px solid rgba(8, 0, 0, 0.411);
      z-index: -1;
      display: block;
-   }
-   
-   .menu a.logotype {
-     position: absolute!important;
+}
+
+.menu a.logotype {
+     position: absolute !important;
      top: 11px;
      left: 55px;
      display: block;
@@ -155,35 +168,42 @@ ul {
      color: rgb(252, 248, 248);
      font-size: 31px;
      padding: 10px;
-   }
-   
-   .menu a.logotype span { font-weight: 400; }
-   
-   .menu a.logotype:hover { color: #777; }
-   
-   .sub-menu-dropdown { background-color: #333; }
-   
-   .menu:hover {
+}
+
+.menu a.logotype span {
+     font-weight: 400;
+}
+
+.menu a.logotype:hover {
+     color: #777;
+}
+
+.sub-menu-dropdown {
+     background-color: #333;
+}
+
+.menu:hover {
      position: absolute;
      left: 0;
      top: 0;
-   }
-   
-   .openNav .menu:hover {
+}
+
+.openNav .menu:hover {
      position: absolute;
      left: -200px;
-    
-   }
-   
-   .openNav .menu {
-    
+
+}
+
+.openNav .menu {
+
      transform: translate3d(200px, 0, 0);
      transition: all 1s;
-   }
-        
-        label.hamburger {
-             display: none;
-        }
+}
+
+label.hamburger {
+     display: none;
+}
+
 .nav {
      width: 100%;
      margin: 0 auto;
@@ -199,6 +219,7 @@ ul {
      text-decoration: none;
 }
 
+/* Name, Title and Introduction Section */
 .main-section {
      height: 750px;
      padding-top: 10px;
@@ -206,39 +227,46 @@ ul {
      background-size: cover;
      background-position: 0 -360px;
      background-attachment: fixed;
-     
-
 }
-.personal-info{
+.container-fluid {
+     margin: 0;
+     padding: 0;
+     background-color: rgb(7, 7, 6);
+}
+.personal-info {
      font-family: 'Cinzel', serif;
-   height:400PX;
-   margin-top:200px;
+     height: 400PX;
+     margin-top: 200px;
+  }
+.personal-info .name{
+     font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+/* Project Section styling */
+
+.project-semi-colon {
+     height: 200px;
+     width: 200px;
+     font-size: 50px;
+     margin-right: 20px
+}
+.project-text{
+ 
+     font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .social-media {
      color: white
 }
-
 .social-media:hover {
      color: rgba(253, 252, 252, 0.267);
      text-decoration: none;
 }
 
-.arrow {
-     color: white;
-     opacity: 0.5;
-}
 
-.arrow:hover {
-     color: rgba(248, 246, 246, 0.616);
-     text-decoration: none;
-}
-
-.semi-colon {
-     height: 200px;
-     width: 200px;
-     font-size: 50px;
-     margin-right: 20px
+.badge {
+     font-family: 'Dosis', sans-serif;
+     background-color: rgb(92, 97, 107)
 }
 
 .hr {
@@ -253,20 +281,17 @@ ul {
      background: url('../images/woods.jpg');
      background-size: cover;
      background-position: 0 -360px;
-     background-attachment: fixed; 
-     padding-top:100px;
+     background-attachment: fixed;
+     padding-top: 100px;
 
-     
+
 }
 
-.name{
-     font-family: 'Old Standard TT', serif;
+.my-projects {
+     margin-bottom: 100px;
+
 }
 
-.my-projects{
-     margin-bottom:100px;
-     
-}
 .project-image {
      width: 100%;
      height: 96%
@@ -274,25 +299,26 @@ ul {
 
 .project {
      background-color: rgba(0, 0, 0, 0.247);
-     width: 100%;
-    
+     width: 100%;    
 }
 
 /* color */
 .btn-white {
      background-color: rgb(189, 187, 187);
-     color: black
+     color: black;
+     margin: 5px;
+     padding-top: 6px;
+     width: 30%;
+     height: 30px;
+     font-size: 20px
 }
-.btn-white a{
-list-style: none;
-color:black
+
+.btn-white a:hover {
+     color: rgb(124, 121, 121);
+     text-decoration: none;
 
 }
-.btn-white a:hover{
-     color:rgb(124, 121, 121);
-     text-decoration: none
-     }
-     
+
 
 .val {
      border-left: 6px solid rgb(249, 252, 249);
@@ -308,6 +334,8 @@ color:black
 
 .my-projects {
      margin-bottom: 100px;
+     background-color: rgba(0, 0, 0, 0.692);
+     font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .skills_container {
@@ -324,62 +352,70 @@ color:black
      font-family: 'Cinzel', serif;
      background-color: rgba(7, 5, 5, 0.8);
 }
-.about-fluid{
+
+.about-fluid {
      background: url('../images/forest.jpg');
      background-size: cover;
      padding-top: 100px;
      background-position: 0 -360px;
-     background-attachment: fixed; 
+     background-attachment: fixed;
 }
-.about-container{
+
+.about-container {
      background-color: rgba(5, 1, 1, 0.85);
 }
-.about-header{
-font-size: 3em;
-color:rgb(155, 153, 158)
+
+.about-header {
+     font-size: 3em;
+     color: rgb(155, 153, 158)
 }
+
 /* contact me sections */
-.contact-row{
-background-color: rgba(12, 11, 11, 0.822)
-
+.contact-row {
+     background-color: rgba(12, 11, 11, 0.822)
 }
-.contact-row img{
-     border-radius:50%;
+
+.contact-row img {
+     border-radius: 50%;
      width: 300px;
-     height:300px;
-}
-.contact-detail{
-margin-top:3%
-
-}
-.a.name, .a.title, .a.email{
-font-size: 120px;
-margin-top:30px;
-
+     height: 300px;
 }
 
-.a.github a:hover{
+.contact-detail {
+     margin-top: 3%
+}
+
+.a.name,
+.a.title,
+.a.email {
+     font-size: 120px;
+     margin-top: 30px;
+
+}
+
+.a.github a:hover {
      text-decoration: none;
 }
 
 /* footer */
 
-footer{
+footer {
      background-color: rgba(7, 6, 2, 0.61);
 }
-.footer-group{
-     padding:10px; 
-    
-}
-.footer-item a{
-margin-left: 20px;
-color:white;
-font-size: 20px;
-text-decoration: none
+
+.footer-group {
+     padding: 10px;
 
 }
-.footer-item a:hover{
-color:rgb(124, 121, 121);
-text-decoration: none
+
+.footer-item a {
+     margin-left: 20px;
+     color: white;
+     font-size: 20px;
+     text-decoration: none
 }
 
+.footer-item a:hover {
+     color: rgb(124, 121, 121);
+     text-decoration: none
+}

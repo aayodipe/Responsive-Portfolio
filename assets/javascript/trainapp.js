@@ -36,7 +36,7 @@ $(document).ready(function () {
                          TrainFirstTime:trainFirstTime    
                     }
                     // Push data to firebase database
-                   // database.ref().push(trainData)
+                    database.ref().push(trainData)
 
                     //clear the input field                  
                     $("#train-name").val("")
