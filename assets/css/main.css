@@ -351,6 +351,7 @@ label.hamburger {
 .Skills {
      font-family: 'Cinzel', serif;
      background-color: rgba(7, 5, 5, 0.8);
+
 }
 
 .about-fluid {
@@ -366,8 +367,9 @@ label.hamburger {
 }
 
 .about-header {
-     font-size: 3em;
-     color: rgb(155, 153, 158)
+     font-size: 2em;
+     color: rgb(155, 153, 158);
+
 }
 
 /* contact me sections */
