@@ -15,7 +15,7 @@ You can view this project live [here](https://ayodipeadeyemi.com/).
 # Screenshot
 
 ## MY PERSONAL INFO.
-![portfolio]([Imgur](https://i.imgur.com/lQEjqmS.png))
+![portfolio](https://i.imgur.com/lQEjqmS.png))
 
 ## ABOUT ME.
 ![portfolio](https://i.imgur.com/CxY46Nb.png)
